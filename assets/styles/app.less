@@ -1,0 +1,127 @@
+// Variables
+@font-family: sans-serif;
+@margin-basic: 0;
+@margin-thicker: 0.5rem;
+@border-thickness: 1px;
+@border-type: solid;
+@box-sizing: border-box;
+@font: inherit;
+@cursor: pointer;
+@outline: none;
+@padding-btn: 0.5rem 1.5rem;
+@radius-btn: 5px;
+@padding-input: 0.15rem 0.25rem;
+@display-input:block;
+@width:100%;
+@margin-section:2rem auto;
+
+
+// colors
+@text-area-color: @button-color;
+@button-color: #000053;
+@button-active-color: #12128a;
+@button-text-color: white;
+@border_color: #ccc;
+@post-item-button-color: #920101;
+@post-item-button-active-color: #dd2929;
+@post-item_-shadow-color: rgba(0, 0, 0, 0.26);
+@post-item-text-color: #414141;
+
+// Usage
+* {
+    box-sizing: @box-sizing;
+  }
+  
+  html {
+    font-family: @font-family;
+  }
+  
+  body {
+    margin: @margin-basic;
+  }
+  
+  button {
+    font: @font;
+    border: @border-thickness @border-type @button-color;
+    color: @button-text-color;
+    background: @button-color;
+    padding: @padding-btn;
+    border-radius: @radius-btn;
+    cursor: @cursor;
+  }
+  
+  button:focus {
+    outline: @outline;
+  }
+  
+  button:hover,
+  button:active {
+    background: @button-active-color;
+    border-color: @button-active-color;
+  }
+  
+  label,
+  input,
+  textarea {
+    display: @display-input;
+    margin: @margin-thicker @margin-basic;
+  }
+  
+  input,
+  textarea {
+    width: @width;
+    font: @font;
+    padding: @padding-input;
+    border: 1px @border-type @border_color;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: @outline;
+    border-color: @text-area-color;
+  }
+  
+  section {
+    width: 40rem;
+    max-width: 90%;
+    margin: @margin-section;
+    border: 1px @border-type @border_color;
+    padding: extract(@padding-btn,2);
+  }
+  
+  .form-control {
+    margin: 0.5rem 0;
+  }
+  
+  .posts {
+    list-style: if((2>1),none,square);
+    margin: @margin-basic;
+    padding: @margin-basic;
+  }
+  
+  .post-item {
+    margin: range(0.95rem,1rem,0.01) @margin-basic;
+    box-shadow: 0 2px 6px @post-item_-shadow-color;
+    padding: 1rem;
+  }
+  
+  .post-item h2,
+  .post-item p {
+    margin: @margin-thicker @margin-basic;
+  }
+  
+  .post-item h2 {
+    font-size: 1.5rem;
+    color: @post-item-text-color;
+  }
+  
+  .post-item button {
+    border-color: @post-item-button-color;
+    background: @post-item-button-color;
+  }
+  
+  .post-item button:hover,
+  .post-item button:active {
+    border-color: @post-item-button-active-color;
+    background: @post-item-button-active-color;
+  }
